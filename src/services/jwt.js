@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 
-const JWT_KEY = "3206116208b1679787b89e8a2a9965a8d2f69bf0e5e2b646bd245700bda0218c"; // random string
+const JWT_KEY = process.env.JWT_KEY;
+if (!JWT_KEY) throw "No JWT_KEY!";
 const expiresSec = 60 * 60 * 24; // 1 day
 
 const createJwt = data => new Promise((resolve, reject) => {

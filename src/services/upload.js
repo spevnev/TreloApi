@@ -2,8 +2,8 @@ const cloudinary = require("cloudinary");
 
 cloudinary.config({
 	cloud_name: "trelo",
-	api_key: "542497378556888",
-	api_secret: "wyP8YLvIesBvWi3IOW2pGbR9q_o",
+	api_key: process.env.CLOUDINARY_KEY,
+	api_secret: process.env.CLOUDINARY_SECRET,
 	secure: true,
 });
 

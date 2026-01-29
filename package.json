@@ -1,33 +1,35 @@
 {
-  "name": "treloback",
+  "name": "trelo-api",
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "17.5.0"
+    "node": "25.3.0"
   },
   "license": "MIT",
   "scripts": {
     "start": "nodemon src",
-    "build": "npm run test && docker image build -t trelo-back .",
+    "build": "docker image build -t trelo-api .",
     "test": "jest"
   },
   "dependencies": {
-    "ajv": "^8.10.0",
-    "ajv-formats": "^2.1.1",
-    "body-parser": "^1.19.1",
-    "cloudinary": "^1.28.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.2",
-    "helmet": "^5.0.2",
-    "jsonwebtoken": "^8.5.1",
-    "pg": "^8.7.3",
-    "redis": "^4.0.4",
-    "socket.io": "^4.4.1"
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "body-parser": "^2.2.2",
+    "cloudinary": "^2.9.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.17.2",
+    "redis": "^5.10.0",
+    "socket.io": "^4.8.3"
   },
   "devDependencies": {
     "@databases/pg-test": "^3.1.2",
-    "axios": "^0.26.0",
-    "jest": "^27.5.1",
-    "supertest": "^6.2.2"
+    "axios": "^1.13.4",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.2.2"
   }
 }

@@ -4,7 +4,7 @@ const {verifyJwt} = require("../services/jwt");
 const {setSocketId, deleteSocketId} = require("../redis/socketId");
 
 const createWss = server => {
-	const origin = process.env.FRONTEND_URL || "http://localhost:3001";
+	const origin = process.env.FRONTEND_URL || "http://localhost:3000";
 	const wss = new Server(server, {path: "/ws/", cors: {origin}});
 
 	wss.on("connection", async socket => {

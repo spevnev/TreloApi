@@ -23,7 +23,7 @@ const authenticated = async (req, res, next) => {
 
 // Authorization (has authority):
 const bodyToLocals = async (req, res) => {
-	const boardId = req.body.boardId || req.params.boardId;
+	const boardId = req.body && req.body.boardId ? req.body.boardId : req.params.boardId;
 	if (!boardId) return res.sendStatus(400);
 
 	const board = await boardDB.getBoard(boardId);

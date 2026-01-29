@@ -1,6 +1,9 @@
+require("dotenv").config();
+
 const DBGlobalSetup = require("@databases/pg-test/jest/globalSetup");
 
 const globalSetup = async () => {
+	delete process.env.DATABASE_URL;
 	await DBGlobalSetup();
 
 	const createTables = require("../../src/db/createTables");
