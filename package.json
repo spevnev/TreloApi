@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "25.3.0"
+    "node": ">=22.0.0"
   },
   "license": "MIT",
   "scripts": {
     "start": "nodemon src",
-    "build": "docker image build -t trelo-api .",
     "test": "jest"
   },
   "dependencies": {

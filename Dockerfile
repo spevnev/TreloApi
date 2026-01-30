@@ -1,12 +1,12 @@
-FROM node:25-alpine
+FROM node:22-alpine
 
-RUN mkdir app
-WORKDIR app
+RUN mkdir /app
+WORKDIR /app
 
 ENV NODE_ENV="production"
 
-ENV PORT=3000
-EXPOSE 3000
+ENV PORT=3001
+EXPOSE 3001
 
 COPY package.json package.json
 RUN npm install --only=prod --no-audit
